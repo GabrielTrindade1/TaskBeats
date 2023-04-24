@@ -1,4 +1,4 @@
-package com.example.taskbeats
+package com.example.taskbeats.presentatiom
 
 import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
@@ -7,12 +7,14 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
-import android.view.WindowId
 import android.widget.LinearLayout
 import androidx.activity.result.ActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.recyclerview.widget.RecyclerView
 import androidx.room.Room
+import com.example.taskbeats.R
+import com.example.taskbeats.data.AppDataBase
+import com.example.taskbeats.data.Task
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.CoroutineScope
@@ -45,7 +47,7 @@ class MainActivity : AppCompatActivity() {
     ) { result: ActivityResult ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data = result.data
-            val taskAction = data?.getSerializableExtra(Companion.TASK_ACTION_RESULT) as TaskAction
+            val taskAction = data?.getSerializableExtra(TASK_ACTION_RESULT) as TaskAction
             val task: Task = taskAction.task
 
             when (taskAction.actionType) {

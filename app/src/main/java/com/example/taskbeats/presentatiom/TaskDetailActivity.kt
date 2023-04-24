@@ -1,4 +1,4 @@
-package com.example.taskbeats
+package com.example.taskbeats.presentatiom
 
 import android.app.Activity
 import android.content.Context
@@ -11,8 +11,10 @@ import android.view.MenuItem
 import android.view.View
 import android.widget.Button
 import android.widget.EditText
-import com.example.taskbeats.MainActivity.ActionType
-import com.example.taskbeats.MainActivity.Companion.TASK_ACTION_RESULT
+import com.example.taskbeats.R
+import com.example.taskbeats.presentatiom.MainActivity.ActionType
+import com.example.taskbeats.presentatiom.MainActivity.Companion.TASK_ACTION_RESULT
+import com.example.taskbeats.data.Task
 import com.google.android.material.snackbar.Snackbar
 
 class TaskDetailActivity : AppCompatActivity() {
