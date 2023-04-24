@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TaskBeats</string>
+    <string name="text_filmes">Filmes</string>
+    <string name="text_personagens">Personagens</string>
+    <string name="text_musicas">Músicas</string>
+    <string name="text_contatos">Contatos</string>
+    <string name="text_categorias">Categorias</string>
+</resources>
