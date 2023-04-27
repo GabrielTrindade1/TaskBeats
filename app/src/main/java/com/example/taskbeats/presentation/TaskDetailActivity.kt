@@ -1,4 +1,4 @@
-package com.example.taskbeats.presentatiom
+package com.example.taskbeats.presentation
 
 import android.app.Activity
 import android.content.Context
@@ -12,8 +12,8 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import com.example.taskbeats.R
-import com.example.taskbeats.presentatiom.MainActivity.ActionType
-import com.example.taskbeats.presentatiom.MainActivity.Companion.TASK_ACTION_RESULT
+import com.example.taskbeats.presentation.TaskListActivity.ActionType
+import com.example.taskbeats.presentation.TaskListActivity.Companion.TASK_ACTION_RESULT
 import com.example.taskbeats.data.Task
 import com.google.android.material.snackbar.Snackbar
 
@@ -110,7 +110,7 @@ class TaskDetailActivity : AppCompatActivity() {
 
     private fun returnAction(task: Task, actionType: ActionType) {
         val intent = Intent().apply {
-                val taskAction = MainActivity.TaskAction(task, actionType.name)
+                val taskAction = TaskListActivity.TaskAction(task, actionType.name)
                 putExtra(TASK_ACTION_RESULT, taskAction)
             }
         setResult(Activity.RESULT_OK, intent)
